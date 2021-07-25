@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express');
+const cors = require('cors');
 
 class Server {
 	constructor(){
@@ -17,6 +18,7 @@ class Server {
 	middlewares() {
 		// Directorio publico
 		this.app.use( express.static( 'public' ) );
+		this.app.use( cors() );
 	}
 
 	routes() {
