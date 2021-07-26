@@ -20,6 +20,9 @@ class Server {
 		// Directorio publico
 		this.app.use( express.static( 'public' ) );
 		this.app.use( cors() );
+
+		// Lectura y parseo del cuerpo de la peticion
+		this.app.use( express.json() );
 	}
 
 	routes() {

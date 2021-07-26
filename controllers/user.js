@@ -11,7 +11,14 @@ const putUsers = ( req, res ) => {
 };
 
 const postUsers = ( req, res ) => {
-    res.json({msg: "post API - controller"});
+    const { nombre, edad } = req.body;
+    res.json(
+        {
+            msg: "post API - controller",
+            nombre,
+            edad
+        }
+    );
 };
 
 const deleteUsers = ( req, res ) => {
